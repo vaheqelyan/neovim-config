@@ -26,6 +26,7 @@ return {
 				autotag = { enable = true },
 				-- ensure these language parsers are installed
 				ensure_installed = {
+					"c_sharp",
 					"json",
 					"javascript",
 					"typescript",
@@ -43,14 +44,11 @@ return {
 					"gitignore",
 					"vue",
 				},
-				-- enable nvim-ts-context-commentstring plugin for commenting tsx and jsx
-				context_commentstring = {
-					enable = true,
-					enable_autocmd = false,
-				},
 				-- auto install above language parsers
 				auto_install = true,
 			})
+
+			vim.g.skip_ts_context_commentstring_module = true
 		end,
 	},
 }

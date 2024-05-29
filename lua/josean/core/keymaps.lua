@@ -10,7 +10,7 @@ local keymap = vim.keymap -- for conciseness
 keymap.set("i", "jj", "<ESC>", { desc = "Exit insert mode with jj" })
 
 -- clear search highlights
-keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
+-- keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
 -- delete single character without copying into register
 keymap.set("n", "x", '"_x')
@@ -36,8 +36,17 @@ keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer
 
 keymap.set("n", "yp", ":let @+=expand('%')<CR>", { desc = "Yank file's path" })
 
+keymap.set("n", "L", "$")
+keymap.set("n", "H", "^")
+
 keymap.set("n", "<C-h>", ":tabprevious<CR>")
 keymap.set("n", "<C-l>", ":tabnext<CR>")
+
+keymap.set("n", "<leader>l", "<C-w>l")
+keymap.set("n", "<leader>h", "<C-w>h")
+
+keymap.set("n", "<leader>j", "<C-w>j")
+keymap.set("n", "<leader>k", "<C-w>k")
 
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")

@@ -33,8 +33,8 @@ opt.cursorlineopt = "number"
 
 -- turn on termguicolors for nightfly colorscheme to work
 -- (have to use iterm2 or any other true color terminal)
-opt.termguicolors = true
-opt.background = "dark" -- colorschemes that can be light or dark will be made dark
+--opt.termguicolors = true
+--opt.background = "dark" -- colorschemes that can be light or dark will be made dark
 opt.signcolumn = "yes" -- show sign column so that text doesn't shift
 
 -- backspace
@@ -78,9 +78,7 @@ g.loaded_tarPlugin = 1
 g.loaded_vimballPlugin = 1
 g.loaded_zipPlugin = 1
 opt.shortmess = opt.shortmess + "c"
-
-opt.pumblend = 15
-vim.cmd("hi PmenuSel blend=0")
+opt.pumblend = 0
 
 autocmd("TextYankPost", {
 	desc = "Highlight yanked text",

@@ -1,28 +1,31 @@
 return {
-	"phaazon/hop.nvim",
+	"ggandor/leap.nvim",
 	config = function()
-		require("hop").setup({ keys = "etovxqpdygfblzhckisuran" })
+		require("leap").create_default_mappings()
 	end,
-	keys = {
-
-		{
-			"f",
-			function()
-				local hop = require("hop")
-				local directions = require("hop.hint").HintDirection
-
-				hop.hint_words({ direction = directions.AFTER_CURSOR })
-			end,
-		},
-
-		{
-			"F",
-			function()
-				local hop = require("hop")
-				local directions = require("hop.hint").HintDirection
-
-				hop.hint_words({ direction = directions.BEFORE_CURSOR })
-			end,
-		},
+	dependencies = {
+		"tpope/vim-repeat",
 	},
+	lazy = false,
+	-- keys = {
+	-- 	{
+	-- 		"f",
+	-- 		function()
+	-- 			local hop = require("hop")
+	-- 			local directions = require("hop.hint").HintDirection
+	--
+	-- 			hop.hint_words({ direction = directions.AFTER_CURSOR })
+	-- 		end,
+	-- 	},
+	--
+	-- 	{
+	-- 		"F",
+	-- 		function()
+	-- 			local hop = require("hop")
+	-- 			local directions = require("hop.hint").HintDirection
+	--
+	-- 			hop.hint_words({ direction = directions.BEFORE_CURSOR })
+	-- 		end,
+	-- 	},
+	-- },
 }
