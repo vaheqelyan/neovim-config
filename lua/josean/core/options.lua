@@ -51,7 +51,7 @@ opt.splitbelow = true -- split horizontal window to the bottom
 opt.swapfile = false
 opt.backup = false
 opt.writebackup = false
-opt.swapfile = false
+opt.undofile = false
 
 -- Disable status line
 opt.showmode = false
