@@ -2,7 +2,6 @@ return {
 	"neovim/nvim-lspconfig",
 	event = { "BufReadPre", "BufNewFile" },
 	dependencies = {
-		"jose-elias-alvarez/typescript.nvim",
 		"hrsh7th/cmp-nvim-lsp",
 		{
 			"smjonas/inc-rename.nvim",
@@ -15,9 +14,6 @@ return {
 
 		-- import cmp-nvim-lsp plugin
 		local cmp_nvim_lsp = require("cmp_nvim_lsp")
-
-		-- import typescript plugin
-		local typescript = require("typescript")
 
 		local keymap = vim.keymap -- for conciseness
 
@@ -98,17 +94,37 @@ return {
 
 		-- configure vue orm server
 		lspconfig["volar"].setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
+			filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
+			init_options = {
+				vue = {
+					hybridMode = false,
+				},
+			},
 		})
 
 		-- configure typescript server with plugin
-		typescript.setup({
-			server = {
-				capabilities = capabilities,
-				on_attach = on_attach,
-			},
-		})
+		-- typescript.setup({
+		-- 	server = {
+		-- 		capabilities = capabilities,
+		-- 		on_attach = on_attach,
+		-- 	},
+		-- })
+		--
+
+		-- lspconfig["tsserver"].setup({
+		-- 	capabilities = capabilities,
+		-- 	on_attach = on_attach,
+		-- 	init_options = {
+		-- 		plugins = {
+		-- 			{
+		-- 				name = "@vue/typescript-plugin",
+		-- 				location = "/usr/bin/vue-language-server",
+		-- 				languages = { "vue" },
+		-- 			},
+		-- 		},
+		-- 	},
+		-- 	filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
+		-- })
 
 		-- configure css server
 		lspconfig["cssls"].setup({

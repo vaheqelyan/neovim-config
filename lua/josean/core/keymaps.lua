@@ -42,11 +42,10 @@ keymap.set("n", "H", "^")
 keymap.set("n", "<C-h>", ":tabprevious<CR>")
 keymap.set("n", "<C-l>", ":tabnext<CR>")
 
-keymap.set("n", "<leader>l", "<C-w>l")
-keymap.set("n", "<leader>h", "<C-w>h")
-
-keymap.set("n", "<leader>j", "<C-w>j")
-keymap.set("n", "<leader>k", "<C-w>k")
+-- keymap.set("n", "<leader>l", "<C-w>l")
+-- keymap.set("n", "<leader>h", "<C-w>h")
+-- keymap.set("n", "<leader>j", "<C-w>j")
+-- keymap.set("n", "<leader>k", "<C-w>k")
 
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")
