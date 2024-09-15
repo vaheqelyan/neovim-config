@@ -7,7 +7,7 @@ return {
 		require("nnn").setup({
 			mappings = {
 				{ "<C-t>", builtin.open_in_tab }, -- open file(s) in tab
-				{ "<C-s>", builtin.open_in_split }, -- open file(s) in split
+				{ "<C-h>", builtin.open_in_split }, -- open file(s) in split
 				{ "<C-v>", builtin.open_in_vsplit }, -- open file(s) in vertical split
 				{ "<C-p>", builtin.open_in_preview }, -- open file in preview split keeping nnn focused
 				{ "<C-y>", builtin.copy_to_clipboard }, -- copy file(s) to clipboard
