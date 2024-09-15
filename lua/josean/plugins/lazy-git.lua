@@ -11,7 +11,7 @@ return {
 	end,
 	keys = {
 		{
-			"<C-g>",
+			"<Leader>g",
 			":LazyGit<CR>",
 		},
 	},
